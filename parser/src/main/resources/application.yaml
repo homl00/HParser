@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /parser
+jwt:
+  secret: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
+  lifetime: 10m
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5052/HParser
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    mode: HTML
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+  main:
+    allow-circular-references: true
